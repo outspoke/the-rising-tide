@@ -1,0 +1,32 @@
+{%- capture body_class -%}
+  {%- if page.slug -%}
+    {{ page.slug }},
+  {%- else if page.permalink -%}
+    {%- if page.url != "/" -%}
+      {{ page.permalink | slugify }},
+    {%- else -%}
+      home,
+    {%- endif -%}
+  {%- endif -%}
+
+  layout-{{ page.layout }},
+
+  {%- if page.id -%}
+    post,
+  {%- else -%}
+    page,
+  {%- endif -%}
+
+  {%- if page.categories -%}
+    {%- for cat in page.categories -%}
+      category-{{ cat | downcase | slugify }},
+    {%- endfor -%}
+  {%- endif -%}
+
+  {%- if page.tags -%}
+    {%- for tag in page.tags -%}
+      tag-{{ tag | downcase | slugify }},
+    {%- endfor -%}
+  {%- endif -%}
+{%- endcapture -%}
+{{- body_class | strip_newlines | split: "," | join: " " -}}

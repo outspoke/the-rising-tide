@@ -1,0 +1,7 @@
+.sass-cache
+.jekyll-metadata
+.DS_Store
+.cache-loader
+dist
+node_modules
+yarn-error.log

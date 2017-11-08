@@ -1,0 +1,65 @@
+.main {
+  background: url(../img/bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding: 1rem 0;
+
+  @include breakpoint(large) {
+    padding: 0;
+  }
+}
+
+.logo {
+  padding-bottom: 6vh;
+
+  img {
+    height: rem-calc(95);
+  }
+
+  @include breakpoint(large) {
+    padding-bottom: 12vh;
+  }
+}
+
+.page-title {
+  h1 {
+    font-weight: 500;
+    margin: 0;
+  }
+
+  margin-bottom: 2rem;
+}
+
+a {
+  font-size: rem-calc(18);
+  font-weight: 500;
+
+  &::after {
+    content: url(../img/arrow.svg);
+    margin-left: 0.5rem;
+    display: inline-block;
+  }
+
+  &:hover::after {
+    opacity: 0.85;
+  }
+}
+
+@include breakpoint(medium down) {
+  p {
+    margin-bottom: 1rem;
+  }
+
+  .mobile-margins {
+    .cell + .cell {
+      margin-top: 2rem;
+    }
+  }
+}
+
+// Bump up the size of everything on 4k monitors
+@include breakpoint(2000px) {
+  html {
+    font-size: 200%;
+  }
+}

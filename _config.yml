@@ -17,7 +17,7 @@ title: The Rising Tide
 email: jay@jayarnielsen.com
 description: > # this means to ignore newlines until "baseurl:"
   A Co-Work space for Innovators, Changemakers & Entrepreneurs
-baseurl: "/the-rising-tide" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://github.com/jayarnielsen/amethyst" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
 
